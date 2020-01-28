@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Layout Example</title>
+
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="bottom-bar">Fixed content</div>
+
+    <!-- header -->
+    <header>
+      <div class="wrapper">
+        <img
+          src="https://emtstatic.com/2019/10/logo-elmundotoday2.png"
+          alt="El Mundo Today"
+        />
+      </div>
+    </header>
+
+    <!-- nav -->
+    <nav>
+      <div class="wrapper">
+        <!-- ul>li*4>a -->
+        <ul class="menu-desktop">
+          <li><a href="#">link</a></li>
+          <li class="parent-menu">
+            <a href="#">link parent</a>
+            <!-- ul.submenu>li*3>a[href=#] -->
+            <ul class="submenu">
+              <li><a href="#">link child</a></li>
+              <li><a href="#">link child</a></li>
+              <li><a href="#">link child</a></li>
+            </ul>
+          </li>
+          <li><a href="#">link</a></li>
+          <li><a href="#">link</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- main -->
+    <main>
+      <div class="wrapper">
+        <div class="half-column">
+          <video src="video/bunny.mp4" class="fluid-content"></video>
+        </div>
+        <div class="half-column">
+          <h1>My super product</h1>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+            <span class="bold">autem tenetur corporis</span>, repellat commodi
+            <a href="#">dolore et deleniti</a>, aut suscipit. Accusamus eligendi
+            velit magnam explicabo eaque nisi qui assumenda beatae. Aperiam.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <div class="wrapper">
+        <small>&copy; Todos los derechos reservados</small>
+      </div>
+    </footer>
+  </body>
+</html>

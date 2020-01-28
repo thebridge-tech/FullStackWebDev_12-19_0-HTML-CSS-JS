@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Example</title>
+  </head>
+  <body>
+    <form action="endpoint.php" method="post">
+      <p>
+        Usuaria/o:<br />
+        <input type="text" name="username" />
+      </p>
+      <p>
+        Contraseña:<br />
+        <input type="password" name="userpass" />
+      </p>
+      <p>
+        Sexo:<br />
+        Mujer<input type="radio" name="gender" value="F" /> Hombre<input
+          type="radio"
+          name="gender"
+          value="M"
+        />
+        Otros<input type="radio" name="gender" value="O" />
+      </p>
+      <p>
+        País:<br />
+        <select name="country">
+          <option value="">-- Seleccione su país, por favor --</option>
+          <option value="es">España</option>
+          <option value="us">USA</option>
+          <option value="bf">Burkina Faso</option>
+        </select>
+      </p>
+      <p>
+        Cuéntame tu vida:<br />
+        <textarea name="mylife" cols="30" rows="10"></textarea>
+      </p>
+      <p>
+        <input type="checkbox" name="tos" value="ok" />Acepto las condiciones
+      </p>
+      <p>
+        <input type="submit" value="Entrar" />
+      </p>
+    </form>
+  </body>
+</html>

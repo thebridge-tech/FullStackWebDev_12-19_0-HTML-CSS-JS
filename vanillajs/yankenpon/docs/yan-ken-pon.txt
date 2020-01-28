@@ -1,0 +1,51 @@
+3 estados
+	1) Inicio
+		(output) Qué va a mostrar:
+			Imagen
+			Botón de comenzar
+				(input) Cuando... click --> Ir al estado 2
+		(init) Declarar variables y funciones
+
+	2) Juego
+		Elementos (datos (sustantivos)):
+			1 jugador humano ("Chris")
+				selectedOption
+				chooseOption()
+					I: Conjunto de opciones
+					P: Capturar la entrada del usuario
+					O: La opción elegida
+
+			1 jugador máquina ("YKP3000")
+				selectedOption
+				chooseOption()
+					I: Conjunto de opciones
+					P: Elegir una opción aleatoriamente
+					O: La opción elegida
+
+		Acciones (proceso (verbos)):
+			- "Los dos jugadores" eligen a la vez "una opción entre 3"
+
+			- "El sistema" compara "ambas opciones seleccionadas" y determina el ganador (o empata)
+				I: Las dos opciones
+				P: Comparar según las reglas del yan-ken-pon
+				O: Resultado (gana Chris, gana YKP, empate)
+
+			- "El sistema" actualiza el marcador (si procede)
+				I: Resultado de la jugada actual
+				P: Sumar 1 a quien ganó o no sumar nada
+				O: Marcador actualizado
+
+			- "El sistema" comprueba las condiciones de victoria
+				I: Marcador
+				P: Comprobar si uno de los dos jugadores llegó a 5
+				O: Resultado (ganó Chris, ganó YKP, sigue)
+
+			- "El sistema" va al estado 3 (si procede)
+				I: Resultado de la partida
+				P: Si la cosa sigue --> Continuar juego
+					Si no --> Ir al estado 3
+	3) Fin
+		(output) Qué va a mostrar:
+			El ganador
+			Botón de volver a jugar
+				(input) Cuando... click --> Ir al estado 1
