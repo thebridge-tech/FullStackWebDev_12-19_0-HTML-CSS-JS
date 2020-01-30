@@ -102,12 +102,16 @@ let nemo = new GoldFish("Nemo");
 let woody = new ArrowBird("Woody");
 
 // - Nemo learns how to fly from Woody (forever)
-nemo.fly = woody.fly.bind(nemo);
+nemo.fly = woody.fly;
 //nemo.fly();
 
+// - Woody learns how to swim from Nemo (forever)
+woody.swim = nemo.swim.bind(woody);
+//woody.swim();
+
 // - Woody learns to swim from Nemo (once)
-nemo.swim.call(woody, 2, 4, -8, 10);
-nemo.swim.apply(woody, [2, 4, -8, 10]);
+//nemo.swim.call(woody, 2, 4, -8, 10);
+//nemo.swim.apply(woody, [2, 4, -8, 10]);
 
 // - Nemo & Woody say their names (if they can)
 //nemo.sayName();

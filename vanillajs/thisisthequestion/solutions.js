@@ -29,8 +29,8 @@ var whoAmI = function() {
 
 // - Q&T
 
-sayMessage("Hello World"); // ???
-whoAmI(); // ???
+sayMessage("Hello World"); // "Hello World"
+whoAmI(); // Window (wo/ "use strict")
 
 /***
  *
@@ -54,8 +54,8 @@ const janeDoe = {
 
 // - Q&T
 
-janeDoe.whoAmI(); // ???
-janeDoe.sayMessage(); // ???
+janeDoe.whoAmI(); // Object (janeDoe)
+janeDoe.sayMessage(); // "Hello World"
 
 /***
  *
@@ -80,8 +80,8 @@ function PolitePerson() {
 // - Q&T
 
 var johnDoe = new PolitePerson();
-johnDoe.whoAmI(); // ???
-johnDoe.sayMessage(); // ???
+johnDoe.whoAmI(); // Object (janeDoe)
+johnDoe.sayMessage(); // "Hello World"
 
 /***
  *
@@ -105,14 +105,14 @@ const data = {
 
 // - Q&T
 
-whoAmI.call(data); // ???
-whoAmI.apply(data); // ???
+whoAmI.call(data); // Object data { message: "Hello World" }
+whoAmI.apply(data); // Object data { message: "Hello World" }
 
 sayMessage.call(data, "Bye", "Bye", "Beatiful"); // "Bye Bye Beatiful"
 sayMessage.apply(data, ["Bye", "Bye", "Beatiful"]); // "Bye Bye Beatiful"
 
 const boundWhoAmI = whoAmI.bind(data);
-boundWhoAmI(); // ???
+boundWhoAmI(); // Object data { message: "Hello World" }
 
 /***
  *
